@@ -1,0 +1,7 @@
+#
+# PageTS for crio-blog
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crio_blog/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crio_blog/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crio_blog/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crio_blog/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
