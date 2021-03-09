@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+	<div class="container">
+		<f:link.page pageUid="1" class="navbar-brand">crio_blog</f:link.page>
+
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			Menu
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<f:for each="{mainnavigation}" as="mainnavigationItem">
+					<li class="nav-item {f:if(condition: mainnavigationItem.active, then:'active')}">
+						<a class="nav-link"
+						   href="{mainnavigationItem.link}"
+						   target="{mainnavigationItem.target}"
+						   title="{mainnavigationItem.title}">
+							{mainnavigationItem.title}
+						</a>
+
+						<f:comment>
+							<f:if condition="{mainnavigationItem.children}">
+								<ul>
+									<f:for each="{mainnavigationItem.children}" as="child">
+										<li class="nav-item {f:if(condition: child.active, then:'active')}">
+											<a class="nav-link" href="{child.link}" target="{child.target}" title="{child.title}">
+												{child.title}
+											</a>
+										</li>
+									</f:for>
+								</ul>
+							</f:if>
+						</f:comment>
+
+
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+</html>

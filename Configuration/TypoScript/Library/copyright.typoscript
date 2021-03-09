@@ -1,0 +1,7 @@
+lib.copyright = TEXT
+lib.copyright {
+   data = date : U
+   strftime = %Y
+   noTrimWrap = |&copy; Lukas Maxheim |  |
+   allWrap= <small>|</small>
+ }

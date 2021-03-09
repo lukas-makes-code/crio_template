@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		typo3conf/ext/crio_blog/Resources/Private/Partials/List/Item.html
+-->
+<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+    <div class="post-preview">
+        <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+            <h2 class="post-title" itemprop="headline">{newsItem.title}</h2>
+            <h3 class="post-subtitle">{newsItem.teaser}</h3>
+        </n:link>
+        <f:if condition="{newsItem.author}">
+            <p class="post-meta">
+                Posted by
+                <f:link.typolink parameter="{newsItem.authorEmail }">{newsItem.author}</f:link.typolink>
+                on
+                <time itemprop="datePublished"
+                      datetime="{f:format.date(date:newsItem.datetime, format:'d-m-Y')}">
+                    <f:format.date format="F d, Y">{newsItem.datetime}</f:format.date>
+                </time>
+            </p>
+        </f:if>
+    </div>
+    <f:if condition="{iterator.isLast}">
+        <f:else>
+            <hr>
+        </f:else>
+    </f:if>
+</div>
+</html>
