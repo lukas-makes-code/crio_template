@@ -1,0 +1,32 @@
+<f:layout name="Innenseite"/>
+<f:section name="Main">
+
+	<!-- Navigation -->
+	<f:render partial="Navigation" arguments="{_all}"/>
+
+	<!-- Page Header -->
+	<f:render partial="Header" arguments="{_all}"/>
+
+	<!-- Main Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+                <f:comment>
+                    <!-- Pager -->
+                    <div class="clearfix">
+                        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                    </div>
+                </f:comment>
+			</div>
+		</div>
+	</div>
+
+	<f:render partial="Footer" arguments="{_all}"/>
+
+
+</f:section>

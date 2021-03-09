@@ -1,14 +1,19 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <header class="masthead"
-        style="background-image: url('/typo3conf/ext/crio_blog/Resources/Public/Images/devon-fay-scifi-alley.jpg')">
+		style="background-image: url('/typo3conf/ext/crio_blog/Resources/Public/Images/devon-fay-scifi-alley.jpg')">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-10 mx-auto">
 				<div class="site-heading">
-					<h1 class="text-lowercase">crio blog</h1>
-					<span class="subheading">A Blog Theme based on Start Bootstraps "Clean-Blog"</span>
+					<h1 class="text-lowercase">
+						<f:if condition="{data.nav_title} == ''">
+							<f:then>{data.title}</f:then>
+							<f:else>{data.nav_title}</f:else>
+						</f:if>
+					</h1>
+					<span class="subheading">{data.subtitle}</span>
 				</div>
 			</div>
 		</div>
