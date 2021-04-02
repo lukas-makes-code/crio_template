@@ -1,22 +1,27 @@
 {
-	"name": "crescent-io/crio-blog",
-	"type": "typo3-cms-extension",
-	"description": "Blog template based on Clean Blog",
-	"homepage": "https://blog.lukas-mx.de",
-	"license": [
-		"GPL-2.0-or-later"
-	],
-	"keywords": [
-		"TYPO3 CMS"
-	],
-	"require": {
-		"typo3/cms-core": "^10.2",
-		"typo3/cms-rte-ckeditor": "^10.2",
-		"typo3/cms-fluid-styled-content": "^10.2"
-	},
-	"autoload": {
-		"psr-4": {
-			"CrescentIo\\CrioBlog\\": "Classes/"
-		}
-	}
+  "name": "crescent-io/crio-blog",
+  "description": "Blog template based on Clean Blog",
+  "type": "typo3-cms-extension",
+  "homepage": "https://blog.lukas-mx.de",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "keywords": [
+    "TYPO3 CMS"
+  ],
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "crio_blog"
+    }
+  },
+  "require": {
+    "typo3/cms-core": "^10.4",
+    "typo3/cms-rte-ckeditor": "^10.4",
+    "typo3/cms-fluid-styled-content": "^10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "CrescentIo\\CrioBlog\\": "Classes/"
+    }
+  }
 }
